@@ -260,7 +260,7 @@ describe('Rule Validation', () => {
       expect(response.body).toHaveProperty('data');
       expect(response.body.status).toEqual('error');
       expect(response.body.data).toEqual(null);
-      expect(response.body.message).toEqual('condition in rule should be one of "eq", "neq", "gte", "gt", "contains".');
+      expect(response.body.message).toEqual('condition in rule should be one of [eq | neq | gte | gt | contains].');
       done();
     });
     it('Should return error when data is not of valid acccepted types', async (done) => {
